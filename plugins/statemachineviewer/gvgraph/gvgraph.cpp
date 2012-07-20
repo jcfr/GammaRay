@@ -390,8 +390,8 @@ QList<GVEdgePair> GVGraph::gvEdges() const
       // note that the position attributes in graphviz point to the *center* of this element.
       // we need to subtract half of the width/height to get the top-left position
       object.m_labelBoundingRect = QRectF(
-        (edge->u.label->pos.x - edge->u.label->dimen.x / 2.0) * (dpi / DotDefaultDPI),
-        ((_graph->u.bb.UR.y - edge->u.label->pos.y) - edge->u.label->dimen.y / 2.0) * (dpi / DotDefaultDPI),
+        (edge->u.label->p.x - edge->u.label->dimen.x / 2.0) * (dpi / DotDefaultDPI),
+        ((_graph->u.bb.UR.y - edge->u.label->p.y) - edge->u.label->dimen.y / 2.0) * (dpi / DotDefaultDPI),
         edge->u.label->dimen.x * (dpi / DotDefaultDPI),
         edge->u.label->dimen.y * (dpi / DotDefaultDPI));
     }
